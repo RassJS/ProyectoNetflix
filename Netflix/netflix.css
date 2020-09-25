@@ -1,0 +1,236 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.logotipe {
+    font-family: 'Bebas Neue', cursive;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .contenedor .logotipe {
+    font-weight: normal;
+    color: red;
+    font-size: 40px;  
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #fff;
+}
+
+
+/* Pelicula principal */
+
+
+
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient( rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100% ), url(pelicula.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+
+.pelicula-principal .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+    background: rgba(0, 0, 0, .50);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+    background: #fff;
+    color: #000;
+}
+
+.pelicula-principal .boton i {
+    margin-right: 1.25em;
+}
+
+/* Contenedor titulo y controles */
+
+.contenedor-titulos-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contenedor-titulos-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-titulos-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulos-controles .indicadores button:hover,
+.contenedor-titulos-controles .indicadores button.activo {
+    background: red;
+}
+
+/* Contenedor principal y flechas */
+
+.peliculas-recomendadas .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative; /* importante para posicionar las flechas, la razon es que con esto podemos darle
+     un posicionamiento absoluto a las flechas para ponerlas dentro del carrusel de imagenes */
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+
+/* Carrousel */
+
+.peliculas-recomendadas .contenedor-carrousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth ;  /* Esto nos va a permitir cual va a ser el comportamiento del scroll por ejemplo
+    si te fijas en esta misma web que tenemos cuando damos click a una imagen que tiene el a href="#" 
+    lo que hace es por asi decirlo recargar la pagina web porque no nos envia a ningun lugar y si estamos abajo
+    automaticamente el scroll nos va a subir al principio de la pagina , la propiedad smooth lo que va a hacer
+    es el mismo efecto pero no tan brusco como antes por asi decirlo con una animacion si lo ponemos aca en
+    .contenedor-carousel no va a pasar nada pero si lo pones en el body si que va a funcionar , pero el punto de
+    ponerlo aqui es que recuerda que vamos a poner un carousel que cuando le demos click se va a correr tipo 
+    con una animacion que obviamente haremos con javascript pero es muy importante para que funcione  */
+}
+
+.peliculas-recomendadas .contenedor-carrousel .carrousel {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.peliculas-recomendadas .contenedor-carrousel .carrousel .pelicula {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carrousel .carrousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carrousel .carrousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+}
+
+
+/* Media Querys */
+
+@media screen and (max-width: 880px) {
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pelicula-principal {
+        font-size: 14px;
+    }
+
+    .pelicula-principal .descripcion {
+        max-width: 100%;
+    }
+}
+
+
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFlix</title>
+    <link rel="stylesheet" href="netflix.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipe">NetFlix</h2>
+            <nav>
+                <a href="#" class="active">Inicio</a>
+                <a href="#">Programas</a>
+                <a href="#">Peliculas</a>
+                <a href="#">Mas Recientes</a>
+                <a href="#">Mi Lista</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Interestelar</h3>
+                <p class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eius eligendi? Dolorem labore fuga quis accusamus corporis molestias reprehenderit pariatur, ut, iure hic quisquam saepe? Inventore a deserunt exercitationem aperiam.</p>
+                <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+                <button role="button" class="boton"><i class="fas fa-info-circle"></i>Mas Informacion</button>
+            </div>
+        </div>
+
+        <div class="peliculas-recomendadas contenedor">
+            <div class="contenedor-titulos-controles">
+                <h3>Peliculas Recomendadas</h3>
+                <div class="indicadores"></div>   <!-- Los generaremos con javascript por eso lo dejamos vacio -->
+            </div>
+
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carrousel">
+                    <div class="carrousel">
+                        <div class="pelicula">
+                            <a href="#"><img src="1.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="2.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="3.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="4.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="5.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="6.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="7.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="1.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="2.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="3.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="4.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="5.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="6.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="7.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="1.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="2.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="3.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="4.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="5.png" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="6.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+            </div>
+
+            
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/f2dd74f9f5.js" crossorigin="anonymous"></script>
+    <script src="netflix.js"></script>
+</body>
+</html>
